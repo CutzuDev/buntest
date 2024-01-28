@@ -8,7 +8,7 @@ const server = Bun.serve({
   },
 });
 
-requestFunction();
+// requestFunction();
 
 console.log(`Served on ${server.url}`);
 console.log(`--------------------------`);
