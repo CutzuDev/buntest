@@ -1,6 +1,6 @@
 export default async function main() {
-  const response = await fetch("http://localhost:3000/", {
-    method: "POST",
+  const response = await fetch("https://buntest-jyd7.onrender.com/", {
+    method: "GET",
     headers: {
       "Content-Type": "application/json",
     },
@@ -8,4 +8,7 @@ export default async function main() {
       message: "Hello from Bun! - script",
     }),
   });
+  const resp = await response.json();
+  console.log(resp);
+
 }

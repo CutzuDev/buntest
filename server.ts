@@ -2,12 +2,9 @@ import requestFunction from "./request";
 
 const server = Bun.serve({
   async fetch(request, server) {
-    try {
-      const reqJ = await request.json();
-      console.log(reqJ);
-    } catch (error) {
-      console.log("Invalid JSON:", error);
-    }
+    const reqJ = await request.json().then((data) => {
+      console.log(data);
+    });
     return new Response("hi");
   },
 });
